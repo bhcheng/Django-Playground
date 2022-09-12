@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coding for Django</title>
+    </head>  
+    <body>
+        {% include 'navbar.html' %}
+        This below changes based on block content
+        {% block content %}
+            replace me 
+        {% endblock %}
+        Still in base.html
+    </body>
+</html>
