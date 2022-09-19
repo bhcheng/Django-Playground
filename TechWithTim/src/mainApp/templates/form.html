@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Create New List{% endblock %}
+
+{% block content %}
+Create/Forms Page
+
+<!-- POST: when you need to submit or encrypt data to and from the website database -->
+<!-- GET: when you are searching for stuff kinda like API ?-->
+<form method = 'post', action = '/create/'>
+    
+    {% csrf_token %} <!-- need to have this when creating a form, sort of like security -->
+    {{form.as_p}} <!-- Has form items going down the page -->
+    <button type = 'submit', name = 'save'>Create New List Item</button>
+</form>
+
+{% endblock %}
